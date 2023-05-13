@@ -14,6 +14,8 @@ Po zrobieniu zadania, pushujemy wynik na nowy branch który stworzyliśmy i twor
 po akceptacji trenera
 """
 
+
+# Zadanie 1
 def popular_sign(string):
     counter = {}
     for sign in string:
@@ -26,3 +28,18 @@ def popular_sign(string):
 
 string = "ala ma kota"
 print(popular_sign(string))
+
+
+# Zadanie 2
+def flatten_list(lst):
+    result = []
+    for element in lst:
+        if isinstance(element, list):
+            result.extend(flatten_list(element))
+        else:
+            result.append(element)
+    return result
+
+lst = [1, 2, [3, [4, 5]], 6, [[[7]]], 8, 9, 10]
+print(flatten_list(lst))
+
